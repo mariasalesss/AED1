@@ -51,13 +51,13 @@ int main() {
     scanf("%d", &t);
 
     for (int inst = 1; inst <= t; inst++) {
-        // aloca a matriz dinamicamente
+       
         int **m = (int**) malloc(N * sizeof(int*));
         for (int i = 0; i < N; i++) {
             m[i] = (int*) malloc(N * sizeof(int));
         }
 
-        // leitura da matriz
+       
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 scanf("%d", &m[i][j]);
@@ -69,7 +69,7 @@ int main() {
         printf("Instancia %d\n", inst);
         printf(valido ? "SIM\n\n" : "NAO\n\n");
 
-        // libera a memória
+       
         for (int i = 0; i < N; i++) {
             free(m[i]);
         }
@@ -78,3 +78,4 @@ int main() {
 
     return 0;
 }
+
